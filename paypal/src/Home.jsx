@@ -5,6 +5,7 @@ import PaypalLogo from "./assets/paypal.png";
 import ProfileIcon from "./assets/manish.jpg";
 import StoreIcon from "./assets/in-store.png";
 import RightArrow from "./assets/right-arrow.png";
+import StorefrontIcon from "@mui/icons-material/Storefront";
 
 export default function Home({
   balance,
@@ -69,8 +70,17 @@ export default function Home({
         <div className="activity-list">
           {transactions.map((tx, i) => (
             <div className="activity-item" key={i}>
-              <div className="activity-user">@{tx.username}</div>
-              <div className="activity-date">{tx.date}</div>
+              <div className="activity-avatar-user">
+                <div className="activity-avatar-inner" aria-hidden="true">
+                  <StorefrontIcon style={{ color: "#fff", fontSize: 28 }} />
+                </div>
+                <div className="activity-user-info">
+                  <div className="activity-user">
+                    {tx.username || tx.name || "user"}
+                  </div>
+                  <div className="activity-date">{tx.date}</div>
+                </div>
+              </div>
               <div className="activity-amount">
                 €
                 {tx.amount.toLocaleString(undefined, {

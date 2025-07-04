@@ -24,15 +24,16 @@ export default function App() {
     setBalance((b) => b - amount);
     setTransactions((txs) => [
       {
-        username: user.username,
-        name: user.name,
+        username: user,
+        name: user,
         amount,
         date: new Date().toLocaleDateString("en-GB"),
       },
       ...txs,
     ]);
     setSnackbar({
-      message: `€${amount.toLocaleString()} sent to @${user.username}`,
+      title: "Payment sent successfully",
+      description: `€${amount.toLocaleString()} sent to @${user}`,
     });
     setTimeout(() => setSnackbar(null), 3500);
   };
@@ -68,7 +69,9 @@ export default function App() {
           }}
         />
       )}
-      {snackbar && <Snackbar message={snackbar.message} />}
+      {snackbar && (
+        <Snackbar title={snackbar.title} description={snackbar.description} />
+      )}
       <Footer />
     </div>
   );
