@@ -1,3 +1,11 @@
+html {
+  background: #fff !important;
+}
+.search-box,
+.search-box-with-icon {
+  color: #222 !important;
+  -webkit-text-fill-color: #222 !important;
+}
 /* Show all contacts link below Next button */
 .show-all-contacts-link {
   display: block;
@@ -64,10 +72,10 @@ body,
 /* Enhanced responsive styles for SendUser */
 @media (max-width: 600px) {
   .send-user-container {
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
     border-radius: 0;
     /* min-height: 100vh; */
-    box-shadow: 0 2px 8px #0001;
+    /* box-shadow: 0 2px 8px #0001; */
     align-items: stretch;
   }
   .header {
