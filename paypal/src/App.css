@@ -1,5 +1,5 @@
 .activity-avatar-inner {
-  background: #1769aa;
+  background: #009cde;
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -263,7 +263,7 @@ body,
   transition: background 0.2s;
 }
 .send-btn:active {
-  background: #005ea6;
+  background: #009cde;
 }
 .request-btn {
   background: #f2f2f2;
@@ -425,7 +425,7 @@ body,
   background: #e6f0fa;
 }
 .suggestion-avatar {
-  background: #0070ba;
+  background: #009cde;
   color: #fff;
   border-radius: 50%;
   /* width: 36px; */
@@ -459,7 +459,7 @@ body,
   cursor: pointer;
 }
 .next-btn:enabled {
-  background: #0070ba;
+  background: #009cde;
   color: #fff;
   opacity: 1;
 }
@@ -500,7 +500,7 @@ body,
   align-items: center;
 }
 .send-user-avatar {
-  background: #0070f3;
+  background: #009cde;
   color: #fff;
   border-radius: 50%;
   width: 64px;
