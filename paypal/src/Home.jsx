@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import Footer from "./Footer";
-import PaypalLogo from "./assets/paypal.svg";
-import ProfileIcon from "./assets/profile.svg";
+import PaypalLogo from "./assets/paypal.png";
+import ProfileIcon from "./assets/manish.jpg";
 import StoreIcon from "./assets/store.svg";
 import BankIcon from "./assets/bank.svg";
 
