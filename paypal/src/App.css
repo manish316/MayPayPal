@@ -160,6 +160,12 @@ body,
   align-items: center;
   cursor: pointer;
   transition: background 0.2s;
+  color: #222;
+  -webkit-text-fill-color: #222;
+}
+.quick-btn:visited, .quick-btn:active, .quick-btn:focus {
+  color: #222;
+  -webkit-text-fill-color: #222;
 }
 .quick-btn:active {
   background: #f5f7fa;
