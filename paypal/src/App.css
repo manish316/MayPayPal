@@ -35,7 +35,11 @@
   transition: border 0.2s;
   z-index: 1;
   direction: ltr;
+  background: #fff !important;
+  color: #222 !important;
+  -webkit-text-fill-color: #222 !important;
 }
+
 .amount-input:focus {
   text-align: center;
   border: 2px solid #009cde;
