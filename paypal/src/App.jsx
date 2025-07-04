@@ -3,13 +3,14 @@ import Home from "./Home";
 import SendUser from "./SendUser";
 import SendAmount from "./SendAmount";
 import Snackbar from "./Snackbar";
+import Footer from "./Footer";
 import "./App.css";
 
-const initialUsers = [
-  { name: "Emily Smith", username: "emily_smith" },
-  { name: "Olivia Martinez", username: "olivia_m" },
-  { name: "Liam Jones", username: "liam.j" },
-];
+// const initialUsers = [
+//   { name: "Emily Smith", username: "emily_smith" },
+//   { name: "Olivia Martinez", username: "olivia_m" },
+//   { name: "Liam Jones", username: "liam.j" },
+// ];
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -17,7 +18,7 @@ export default function App() {
   const [transactions, setTransactions] = useState([]);
   const [snackbar, setSnackbar] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
-  const [users] = useState(initialUsers);
+  // const [users] = useState(initialUsers);
 
   const handleSend = (user, amount) => {
     setBalance((b) => b - amount);
@@ -49,10 +50,9 @@ export default function App() {
       )}
       {page === "sendUser" && (
         <SendUser
-          users={users}
           onBack={() => setPage("home")}
-          onNext={(user) => {
-            setSelectedUser(user);
+          onNext={(userName) => {
+            setSelectedUser(userName);
             setPage("sendAmount");
           }}
         />
@@ -69,6 +69,7 @@ export default function App() {
         />
       )}
       {snackbar && <Snackbar message={snackbar.message} />}
+      <Footer />
     </div>
   );
 }

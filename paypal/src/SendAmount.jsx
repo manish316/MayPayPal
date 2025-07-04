@@ -18,14 +18,14 @@ export default function SendAmount({ user, balance, onBack, onSend }) {
 
   return (
     <div className="send-amount-container">
-      <header className="header">
+      <header className="send-header">
         <button className="back-btn" onClick={onBack}>
           <img src={BackIcon} alt="Back" style={{ width: 24, height: 24 }} />
         </button>
         <span className="send-title">Send money</span>
       </header>
-      <div className="send-user-avatar">{user.name[0]}</div>
-      <div className="send-user-name">@{user.username}</div>
+      <div className="send-user-avatar">{user}</div>
+      <div className="send-user-name">{user}</div>
       <div className="amount-input-row">
         <input
           className="amount-input"
