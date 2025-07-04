@@ -3,8 +3,8 @@ import "./App.css";
 import Footer from "./Footer";
 import PaypalLogo from "./assets/paypal.png";
 import ProfileIcon from "./assets/manish.jpg";
-import StoreIcon from "./assets/store.svg";
-import BankIcon from "./assets/bank.svg";
+import StoreIcon from "./assets/in-store.png";
+import RightArrow from "./assets/right-arrow.png";
 
 export default function Home({
   balance,
@@ -39,11 +39,23 @@ export default function Home({
       </div>
       <div className="quick-actions">
         <button className="quick-btn">
-          <img src={StoreIcon} className="quick-icon" alt="Store" />
+          <img
+            src={StoreIcon}
+            width="28px"
+            height="28px"
+            className="quick-icon"
+            alt="Store"
+          />
           Pay in store
         </button>
         <button className="quick-btn">
-          <img src={BankIcon} className="quick-icon" alt="Bank" />
+          <img
+            src={RightArrow}
+            width="28px"
+            height="28px"
+            className="quick-icon"
+            alt="Bank"
+          />
           Transfer to bank
         </button>
       </div>
@@ -55,22 +67,18 @@ export default function Home({
           </button>
         </div>
         <div className="activity-list">
-          {transactions.length === 0 ? (
-            <div className="no-activity">No recent activity</div>
-          ) : (
-            transactions.map((tx, i) => (
-              <div className="activity-item" key={i}>
-                <div className="activity-user">@{tx.username}</div>
-                <div className="activity-date">{tx.date}</div>
-                <div className="activity-amount">
-                  €
-                  {tx.amount.toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                  })}
-                </div>
+          {transactions.map((tx, i) => (
+            <div className="activity-item" key={i}>
+              <div className="activity-user">@{tx.username}</div>
+              <div className="activity-date">{tx.date}</div>
+              <div className="activity-amount">
+                €
+                {tx.amount.toLocaleString(undefined, {
+                  minimumFractionDigits: 2,
+                })}
               </div>
-            ))
-          )}
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
