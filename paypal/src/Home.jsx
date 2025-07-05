@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Footer from "./Footer";
 import PaypalLogo from "./assets/paypal.png";
-import ProfileIcon from "./assets/manish.jpg";
+import ProfileIcon from "./assets/manish.jpeg";
 import StoreIcon from "./assets/in-store.png";
 import RightArrow from "./assets/right-arrow.png";
 import StorefrontIcon from "@mui/icons-material/Storefront";
