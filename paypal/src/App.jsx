@@ -35,7 +35,7 @@ export default function App() {
       title: "Payment sent successfully",
       description: `€${amount.toLocaleString()} sent to ${user}`,
     });
-    setTimeout(() => setSnackbar(null), 3500);
+    setTimeout(() => setSnackbar(null), 1500);
   };
 
   return (
