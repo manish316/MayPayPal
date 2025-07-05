@@ -33,7 +33,7 @@ export default function App() {
     ]);
     setSnackbar({
       title: "Payment sent successfully",
-      description: `€${amount.toLocaleString()} sent to @${user}`,
+      description: `€${amount.toLocaleString()} sent to ${user}`,
     });
     setTimeout(() => setSnackbar(null), 3500);
   };

@@ -345,6 +345,22 @@ body,
 }
 .activity-list {
   margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 #fff;
+}
+
+.activity-list::-webkit-scrollbar {
+  width: 8px;
+  background: #fff;
+}
+.activity-list::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 8px;
 }
 .activity-item {
   display: flex;
