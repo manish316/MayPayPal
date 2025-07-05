@@ -259,7 +259,6 @@ body,
   font-size: 1.08rem;
   font-weight: bold;
   cursor: pointer;
-  display: none;
   box-shadow: 0 2px 8px #0070ba22;
   transition: background 0.2s;
 }
