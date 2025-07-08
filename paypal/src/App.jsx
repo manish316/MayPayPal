@@ -38,8 +38,7 @@ export default function App() {
         <Home
           balance={balance}
           transactions={transactions}
-          // onSend={() => setPage("sendUser")}
-          onSend={null}
+          onSend={() => setPage("sendUser")}
           onRequest={() => alert("Request feature not implemented")}
           onClearAll={() => setTransactions([])}
         />
