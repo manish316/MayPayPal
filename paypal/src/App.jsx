@@ -5,12 +5,7 @@ import SendAmount from "./SendAmount";
 import Snackbar from "./Snackbar";
 import Footer from "./Footer";
 import "./App.css";
-
-// const initialUsers = [
-//   { name: "Emily Smith", username: "emily_smith" },
-//   { name: "Olivia Martinez", username: "olivia_m" },
-//   { name: "Liam Jones", username: "liam.j" },
-// ];
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -18,7 +13,6 @@ export default function App() {
   const [transactions, setTransactions] = useState([]);
   const [snackbar, setSnackbar] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
-  // const [users] = useState(initialUsers);
 
   const handleSend = (user, amount) => {
     setBalance((b) => b - amount);
@@ -44,7 +38,8 @@ export default function App() {
         <Home
           balance={balance}
           transactions={transactions}
-          onSend={() => setPage("sendUser")}
+          // onSend={() => setPage("sendUser")}
+          onSend={null}
           onRequest={() => alert("Request feature not implemented")}
           onClearAll={() => setTransactions([])}
         />
@@ -73,6 +68,7 @@ export default function App() {
         <Snackbar title={snackbar.title} description={snackbar.description} />
       )}
       <Footer />
+      <Analytics />
     </div>
   );
 }

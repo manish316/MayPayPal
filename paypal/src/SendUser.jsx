@@ -8,11 +8,6 @@ import "./App.css";
 
 export default function SendUser({ users, onBack, onNext }) {
   const [query, setQuery] = useState("");
-  // const filtered = users.filter(
-  //   (u) =>
-  //     u.name.toLowerCase().includes(query.toLowerCase()) ||
-  //     u.username.toLowerCase().includes(query.toLowerCase())
-  // );
   return (
     <div className="send-user-container">
       <header className="header send-header">
@@ -37,19 +32,6 @@ export default function SendUser({ users, onBack, onNext }) {
           }}
         />
       </div>
-      {/* <div className="suggestion-list">
-        {filtered.map((u) => (
-          <div
-            key={u.username}
-            className={`suggestion-item${selected === u ? " selected" : ""}`}
-            onClick={() => setSelected(u)}
-          >
-            <span className="suggestion-avatar">{u.name[0]}</span>
-            <span className="suggestion-name">{u.name}</span>
-            <span className="suggestion-username">@{u.username}</span>
-          </div>
-        ))}
-      </div> */}
       <button
         className="next-btn"
         disabled={query.trim() === "" || query.trim().length < 4}
